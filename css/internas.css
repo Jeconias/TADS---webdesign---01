@@ -1,0 +1,135 @@
+/* SE NÃO SOUBER QUAL A FUNÇÃO DO SELECTOR '>', PESQUISE POR: 'Seletores filho CSS'.
+
+PEQUENO EXEMPLO: ul > li
+ISSO SIGNIFICA QUE O 'li' é FILHO DO 'ul'.
+
+SE EU FIZER ISSO:
+
+<ESTRUTURA HTML EXEMPLO>
+
+<div>
+	<li></li>
+	<li></li>
+</div>
+
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+</FIM DA ESTRUTURA HTML EXEMPLO>
+
+<ESTRUTURA CSS EXEMPLO>
+
+ul > li {
+	color: #fff;
+}
+
+</FIM DA ESTRUTURA CSS EXEMPLO>
+
+
+NESSE EXEMPLO A CIMA EU ESTOU DEIXANDO TODOS OS 'li' COM A FONTE BRANCA, PORÉM, APENAS OS
+'li' QUE ESTÃO DENTRO DE TODOS OS 'ul'. O QUE ESTA DENTRO DA 'div' NÃO SERÁ ATINGIDO. */
+
+
+/* ATRIBUI AS PROPRIEDADES PARA O PROXIMO H1 DEPOIS DA CLASSE 'header-top' DEVIDO O '>' */
+.header-top > h1 {
+	color: #D78D1E;
+	font-size: 6em;
+	font-family: "Tahoma", sans-serif;
+	margin-top: 0;
+	margin-bottom: 1%;
+}
+/* ATRIBUI AS PROPRIEDADES PARA TODOS OS 'H2' QUE ESTÃO DENTRO DA CLASSE 'article-center' */
+.article-center h2 {
+	color: #F2C608;
+	font-weight: bold;
+	margin-left: 2%;
+}
+/* ATRIBUI AS PROPRIEDADES PARA TODOS OS 'P' QUE ESTÃO DENTRO DA CLASSE 'article-center' */
+.article-center p {
+	width: 50%;
+	color: #fff;
+	font-size: 1em;
+	font-family: "Trebuchet MS", sans-serif;
+	letter-spacing: 1px;
+	text-align: justify;
+}
+/* ATRIBUI AS PROPRIEDADES PARA TODOS OS 'H2' QUE ESTÃO DEPOIS DE: 'article-center -> section -> div',
+SEGUINDO ESSA ORDEM. SE A ESTRUTURA DO HTML FOR ALTERADA AQUI TBM DEVE SER.*/
+.article-center > section > div > h2 {
+	display: inline-block;
+	vertical-align: middle;
+}
+/* CLASS */
+.cards-title {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100px;
+	height: 50px;
+	background-color: #30383B;
+}
+/* ATRIBUI AS PROPRIEDADES PARA TODOS OS 'ul' QUE ESTÃO DENTRO DAS CLASSES 'habilidades' */
+.habilidades ul {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+/* ATRIBUI AS PROPRIEDADES PARA TODOS OS 'li' QUE ESTÃO DENTRO DA CLASSE 'habilidades' -> ul */
+.habilidades ul > li {
+	display: inline-block;
+	list-style: none;
+	padding: 20px;
+	background-color: #D78D1E;
+	color: #30383B;
+	min-width: 120px;
+	min-height: 80px;
+	line-height: 80px;
+	text-align: center;
+}
+/* ATRIBUI AS PROPRIEDADES PARA TODOS OS 'li' QUE ESTÃO DENTRO DA CLASS 'habilidades > ul' E QUANDO O EVENTO 'hover' FOR DETECTADO */
+.habilidades ul > li:hover {
+	background-color: #F2C608;
+	color: #000;
+	cursor: pointer;
+}
+
+footer {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	margin-top: 5%;
+}
+footer > p {
+	margin: 0 auto;
+	padding-top: 10px;
+	border-top: 1px dashed #F2F2F2;
+	width: 50%;
+}
+
+
+/* ESTILO DO CSS PARA A PÁGINA COM MENU */
+
+.header-top ul > li {
+	display: inline-block;
+	list-style: none;
+	padding: 5px;
+	background-color: #D78D1E;
+	color: #30383B;
+	min-width: 80px;
+	min-height: 20px;
+	text-align: center;
+}
+
+.header-top ul {
+	width: 100%;
+	padding: 0;
+	margin: 0 0 5% 0;
+}
+
+.header-top ul > li:hover {
+	background-color: #F2C608;
+	color: #000;
+	cursor: pointer;
+}
